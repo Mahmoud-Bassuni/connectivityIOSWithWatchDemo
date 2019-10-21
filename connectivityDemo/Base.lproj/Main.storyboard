@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,62 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="connectivityDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OSg-we-Hww">
+                                <rect key="frame" x="24" y="75" width="327" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9az-Fx-2ql"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sF4-Ou-r5h">
+                                <rect key="frame" x="96" y="160" width="180" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BeO-dS-0cP"/>
+                                </constraints>
+                                <state key="normal" title="Send TextValue"/>
+                                <connections>
+                                    <action selector="btnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YqX-yI-hGQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NhU-wY-lKc">
+                                <rect key="frame" x="133" y="224" width="108" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7PT-d5-Wh2"/>
+                                </constraints>
+                                <state key="normal" title="load Data TAble"/>
+                                <connections>
+                                    <action selector="loadDataTable:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tly-nl-4A9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NhU-wY-lKc" firstAttribute="top" secondItem="sF4-Ou-r5h" secondAttribute="bottom" constant="34" id="1MO-2Y-00i"/>
+                            <constraint firstItem="sF4-Ou-r5h" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="96" id="JSf-BJ-blt"/>
+                            <constraint firstItem="sF4-Ou-r5h" firstAttribute="top" secondItem="OSg-we-Hww" secondAttribute="bottom" constant="55" id="OwO-CP-f5H"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="sF4-Ou-r5h" secondAttribute="trailing" constant="99" id="PGJ-sy-6F0"/>
+                            <constraint firstItem="OSg-we-Hww" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" constant="55" id="PwU-Lu-PCy"/>
+                            <constraint firstItem="OSg-we-Hww" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="24" id="SKO-hL-ERC"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="NhU-wY-lKc" secondAttribute="trailing" constant="134" id="YlX-mP-Qjv"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="OSg-we-Hww" secondAttribute="trailing" constant="24" id="dWK-hi-wdb"/>
+                            <constraint firstItem="NhU-wY-lKc" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" constant="133" id="dpL-I1-le9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
+                    <connections>
+                        <outlet property="lbl1" destination="OSg-we-Hww" id="Yey-9l-ahZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
     </scenes>
 </document>
